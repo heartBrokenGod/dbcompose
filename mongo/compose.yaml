@@ -7,8 +7,8 @@ services:
     ports:
       - 27017:27017
     environment:
-      MONGO_INITDB_ROOT_USERNAME: devdb
-      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_ROOT_USERNAME: devuser
+      MONGO_INITDB_ROOT_PASSWORD: devpassword
   mongoexpressd:
     image: mongo-express:latest
     restart: always
@@ -18,5 +18,5 @@ services:
       ME_CONFIG_MONGODB_ENABLE_ADMIN: false
       ME_CONFIG_MONGODB_SERVER: mongod
       ME_CONFIG_MONGODB_PORT: 27017
-      ME_CONFIG_MONGODB_AUTH_USERNAME: devdb
-      ME_CONFIG_MONGODB_AUTH_PASSWORD: password
+      ME_CONFIG_MONGODB_AUTH_USERNAME: devuser
+      ME_CONFIG_MONGODB_AUTH_PASSWORD: devpassword
