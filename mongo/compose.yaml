@@ -1,6 +1,7 @@
 version: '3.1'
 
 services:
+
   mongod:
     image: mongo:latest
     restart: always
@@ -9,6 +10,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: devuser
       MONGO_INITDB_ROOT_PASSWORD: devpassword
+
   mongoexpressd:
     image: mongo-express:latest
     restart: always
